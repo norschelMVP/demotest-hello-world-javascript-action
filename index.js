@@ -9,7 +9,7 @@ try {
   greetingMessage = greetingMessage.concat(nameToGreet," !");
   greetingMessage = reverse(greetingMessage);
 
-  console.log(`Hello ${nameToGreetReverse}!`);
+  console.log(`Hello ${greetingMessage}!`);
   const time = (new Date()).toTimeString();
   core.setOutput("time", time);
   // Get the JSON webhook payload for the event that triggered the workflow
