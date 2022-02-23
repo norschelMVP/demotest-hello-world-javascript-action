@@ -5,7 +5,8 @@ try {
   // `who-to-greet` input defined in action metadata file
   const nameToGreet = core.getInput('who-to-greet');
 
-  greetingMessage = string.concat("Hello ",nameToGreet," !");
+  var greetingMessage = 'Hallo';
+  greetingMessage = greetingMessage.concat(nameToGreet," !");
   greetingMessage = reverse(greetingMessage);
 
   console.log(`Hello ${nameToGreetReverse}!`);
