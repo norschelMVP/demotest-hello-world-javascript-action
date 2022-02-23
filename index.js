@@ -4,7 +4,11 @@ const github = require('@actions/github');
 try {
   // `who-to-greet` input defined in action metadata file
   const nameToGreet = core.getInput('who-to-greet');
-  console.log(`Hello ${nameToGreet}!`);
+  
+  greetingMessage = `Hello ${nameToGreet}!`;
+  greetingMessage = greetingMessage.reverse();
+
+  console.log(`Hello ${nameToGreetReverse}!`);
   const time = (new Date()).toTimeString();
   core.setOutput("time", time);
   // Get the JSON webhook payload for the event that triggered the workflow
@@ -12,4 +16,9 @@ try {
   console.log(`The event payload: ${payload}`);
 } catch (error) {
   core.setFailed(error.message);
+}
+
+
+function reverse(s){
+  return s.split("").reverse().join("");
 }

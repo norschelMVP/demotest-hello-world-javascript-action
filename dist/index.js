@@ -8474,7 +8474,9 @@ const github = __nccwpck_require__(8376);
 try {
   // `who-to-greet` input defined in action metadata file
   const nameToGreet = core.getInput('who-to-greet');
-  nameToGreetReverse = reverse(nameToGreet)
+  
+  greetingMessage = `Hello ${nameToGreet}!`;
+  greetingMessage = greetingMessage.reverse();
 
   console.log(`Hello ${nameToGreetReverse}!`);
   const time = (new Date()).toTimeString();
