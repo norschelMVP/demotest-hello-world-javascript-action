@@ -4,9 +4,9 @@ const github = require('@actions/github');
 try {
   // `who-to-greet` input defined in action metadata file
   const nameToGreet = core.getInput('who-to-greet');
-  
+
   greetingMessage = `Hello ${nameToGreet}!`;
-  greetingMessage = greetingMessage.reverse();
+  greetingMessage = reverse(greetingMessage);
 
   console.log(`Hello ${nameToGreetReverse}!`);
   const time = (new Date()).toTimeString();
