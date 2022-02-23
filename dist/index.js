@@ -8474,7 +8474,9 @@ const github = __nccwpck_require__(8376);
 try {
   // `who-to-greet` input defined in action metadata file
   const nameToGreet = core.getInput('who-to-greet');
-  console.log(`Hello ${nameToGreet}!`);
+  nameToGreetReverse = reverse(nameToGreet)
+
+  console.log(`Hello ${nameToGreetReverse}!`);
   const time = (new Date()).toTimeString();
   core.setOutput("time", time);
   // Get the JSON webhook payload for the event that triggered the workflow
@@ -8484,6 +8486,10 @@ try {
   core.setFailed(error.message);
 }
 
+
+function reverse(s){
+  return s.split("").reverse().join("");
+}
 })();
 
 module.exports = __webpack_exports__;
