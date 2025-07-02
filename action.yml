@@ -1,4 +1,4 @@
-name: 'Hello DWX 2023'
+name: 'Hello DWX 2025'
 description: 'Greet someone and record the time'
 inputs:
   who-to-greet:  # id of input
